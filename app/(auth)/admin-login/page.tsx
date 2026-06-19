@@ -19,7 +19,7 @@ export default function AdminLoginPage() {
     setIsLoading(true);
 
     setTimeout(() => {
-      if (email === "admin@nysc.com.ng" && password === "admin123") {
+      if (email === "admin" && password === "admin") {
         router.push("/admin/dashboard");
       } else {
         setError("Invalid admin credentials. Access denied.");
@@ -86,8 +86,8 @@ export default function AdminLoginPage() {
                 Admin Email
               </label>
               <input
-                type="email"
-                placeholder="admin@nysc.com.ng"
+                type="text"
+                placeholder="admin"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full border border-[#1a6b3c] rounded-full px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#1a6b3c]"
